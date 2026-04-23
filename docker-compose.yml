@@ -1,0 +1,12 @@
+services:
+  whatsapp-mcp:
+    build: .
+    container_name: whatsapp-mcp
+    restart: unless-stopped
+    volumes:
+      - whatsapp-data:/app/whatsapp-bridge/store
+    stdin_open: true
+    tty: true
+
+volumes:
+  whatsapp-data:
